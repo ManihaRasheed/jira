@@ -27,9 +27,9 @@ jobs:
       - name: Run Playwright tests
         run: npx playwright test
 
-      - name: Upload test results (optional)
-        if: failure()
-        uses: actions/upload-artifact@v2
+      - name: Upload test results
+        uses: actions/upload-artifact@v3
         with:
-          name: playwright-results
-          path: playwright-report/
+          name: test-results
+          path: test-results/
+      
